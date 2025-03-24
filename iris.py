@@ -6,10 +6,9 @@ print(sklearn.__version__)
 import tensorflow as tf
 import tensorflow_datasets as tfds
 
-# Ensure TensorFlow 2.x is used
 assert tf.__version__.startswith('2.')
 
-# Load the Iris dataset with defined splits for training and testing
+# Load the Iris dataset 
 (ds_train, ds_test), ds_info = tfds.load(
     'iris',
     split=['train[:80%]', 'train[80%:]'],
